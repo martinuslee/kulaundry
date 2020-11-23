@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Page</title>
+  </head>
+  <body>
+    <h1>KU Laundry</h1>
+    <h4 style="display: inline;">안녕하세요! <%= name %>님!</h4>
+    <button class=button style="margin-left: 20px;"type="button" value="LOGOUT" onclick="window.location.href='/logout';"><span>LOGOUT</span></button>
+    <button
+    class=button
+      type="button"
+      onclick="window.location.href='insert';"
+    ><span>INSERT</span></button>
+ 
+    <hr />
+    <div class="limiter">
+      <div class="container-table100">
+        <div class="wrap-table100">
+          <div class="table100">
+    <table style="text-align: center;">
+      <thead>
+        <tr>
+          <td class="col1">DELETE</td>
+          <td>세탁기 번호</td>
+          <td>사용자 ID</td>
+          <td>위치</td>
+          <td>방번호</td>
+          <td>시작 시간</td>
+          <td>종료 시간</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(function (item, index) { %>
+        <tr>
+          <td><a href="/delete/<%= item.num %>">DELETE</a></td>
+          <td><%= item.num %></td>
+          <td><%= item.user_id %></td>
+          <td><%= item.LOCATION %></td>
+          <td><%= item.roomno %></td>
+          <td><%= item.time %></td>
+          <td><%= item.endtime %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    <style>
+      body {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .col1 {
+        width: 80px;
+      }
+      h1 {
+        background-color: #99001c;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: white;
+        padding-left: 20px;
+      }
+      table {
+        font-family: NanumGothic, sans-serif;
+        border-spacing: 1;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+      }
+      table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  background: #99001c;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table tbody tr {
+  height: 50px;
+}
+table td, table th {
+  text-align: left;
+}
+tbody tr {
+  font-family: OpenSans-Regular;
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:hover {
+  color: #99001c;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+      thead {
+        background-color: #99001c;
+        color: white;
+      }
+      a {
+        color: #99001c;
+      }
+      .table100-head th{
+  font-family: OpenSans-Regular;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+      @media (max-width: 576px) {
+  .container-table100 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+.button {
+
+display: inline-block;
+
+border-radius: 4px;
+
+background-color: #f5f5f5;
+
+border: none;
+
+color: #99001c;
+
+text-align: center;
+
+font-size: 16px;
+
+padding: 5px;
+
+width: 90px;
+
+transition: all 0.5s;
+
+cursor: pointer;
+
+margin: 5px;
+
+vertical-align:middle;
+
+}
+
+
+
+.button span {
+
+cursor: pointer;
+
+display: inline-block;
+
+position: relative;
+
+transition: 0.5s;
+
+}
+
+
+
+.button span:after {
+
+content: '\00bb';
+
+position: absolute;
+
+opacity: 0;
+
+top: 0;
+
+right: -20px;
+
+transition: 0.5s;
+
+}
+
+
+
+.button:hover span {
+
+padding-right: 20px;
+
+}
+
+
+
+.button:hover span:after {
+
+opacity: 1;
+
+right: 0;
+
+}
+
+    </style>
+  </body>
+</html>

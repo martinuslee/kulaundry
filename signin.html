@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign In</title>
+  </head>
+  <body>
+    <h1 style="display: inline">Sign in</h1>
+    <input
+      type="button"
+      value="return"
+      style="display: inline-block; position: relative; left: 65%"
+      onclick="window.location.href='/'"
+      ;
+    />
+    <hr />
+    <form action="/signin" method="post">
+      <fieldset>
+        <legend>개인 정보를 입력해주세요.</legend>
+        <table>
+          <tr>
+            <td>ID</td>
+            <form action="/checkid" method="post">
+              <td><input type="text" name="id" /></td>
+              <td><input type="button" value="중복 확인" id="checkid" /></td>
+            </form>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" /></td>
+          </tr>
+          <tr>
+            <td>이름</td>
+            <td><input type="text" name="name" /></td>
+          </tr>
+
+          <tr>
+            <td>이메일</td>
+            <td><input type="email" name="email" /></td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                type="submit"
+                style="position: relative; left: 140%; margin-top: 8px"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+  <style>
+    body {
+      max-width: 468px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    table {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+    }
+  </style>
+</html>
