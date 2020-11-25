@@ -3,6 +3,8 @@ Korea university dorm washing machine check web service.
 ❌ Non-commercial ❌
 ( Commercial use of this project is prohibited. )
 
+any question please send me an email.
+
 using node.js | mysql | html | ejs | css
 
 ## Server - node.js
