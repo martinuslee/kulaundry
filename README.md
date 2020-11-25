@@ -1,5 +1,5 @@
 # Ku Laundry
-Korea university dorm washing machine check web service 
+Korea university dorm washing machine check web service.
 ❌ Non-commercial ❌
 ( Commercial use of this project is prohibited. )
 
@@ -7,8 +7,8 @@ using node.js | mysql | html | ejs | css
 
 ## Server - node.js
 
-express framework
-connected with mysql
+express framework.
+connected with mysql.
 ejs view template.
 router to login, insert, delete, etc..
 
