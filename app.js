@@ -92,7 +92,7 @@ app.post("/insert", function (request, response) {
   //변수 선언
   var body = request.body;
   // 데이터베이스 쿼리 실행
-  
+
   client.query(
     "INSERT INTO state (num, user_id, roomno) values (?,?,?)",
     [body.num, request.session.userID, body.roomno],
@@ -123,21 +123,20 @@ app.post("/signin", function (request, response) {
   var sql = "INSERT INTO account (id, password, name, email) VALUES(?,?,?,?)";
   var params = [id, password, name, email];
 
-  client.query(sql, params, function (err, rows, fields) {
-    const user = rows[0];
+  client.query(sql, params, function (err, data, fields) {
     if (err) console.log(err);
     else {
-      console.log(user);
+      console.log(data);
       request.session.name = name;
       request.session.authenticate = true;
       request.session.save(() => {
-        response.redirect("/list")
-      })
+        response.redirect("/list");
+      });
     }
-  })
+  });
 });
 
-app.post("/checkid", function (req, res) {
+app.get("/checkid", function (req, res) {
   let user_id = req.body.id;
 
   console.log(req.body.id);
@@ -165,17 +164,19 @@ app.post("/login", function (request, response) {
   client.query(sql, params, function (err, rows, fields) {
     var user = rows[0];
     if (!id || !password) {
-      response.send(`
-      <button onclick="window.location.href='/';">Back</button>
-      <h2>please input all information..</h2>
-  `);
+      //     response.send(`
+      //     <button onclick="window.location.href='/';">Back</button>
+      //     <h2>please input all information..</h2>
+      // `);
+      //     return;
+
+      //window.open();
       return;
     }
     if (!user) {
       response.send(`
-      <button onclick="window.location.href='/';">Back</button>
-      <h1>please check your id</h1>
-  `);
+<script>alert('Check your User ID');location.href='/'</script>
+      `);
     } else if (user.password == password) {
       // response.send(user.name + '  Welcome!');
       request.session.authenticate = true;
@@ -186,9 +187,8 @@ app.post("/login", function (request, response) {
       });
     } else {
       response.send(`
-      <button onclick="window.location.href='/';">Back</button>
-      <h1>Please Check your Password</h1>
-  `);
+      <script>alert('Check your Password');location.href='/'</script>
+            `);
     }
   });
 });

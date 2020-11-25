@@ -18,10 +18,10 @@
       <div class="container-table100">
         <div class="wrap-table100">
           <div class="table100">
-    <table style="text-align: center;">
+    <table>
       <thead>
         <tr>
-          <td class="col1">DELETE</td>
+          <td class="col1">삭제</td>
           <td>세탁기 번호</td>
           <td>사용자 ID</td>
           <td>위치</td>
@@ -33,7 +33,7 @@
       <tbody>
         <% data.forEach(function (item, index) { %>
         <tr>
-          <td><a href="/delete/<%= item.num %>">DELETE</a></td>
+          <td><button class="button" onclick="window.location.href='/delete/<%= item.num %>';"><span>DELETE</span></td>
           <td><%= item.num %></td>
           <td><%= item.user_id %></td>
           <td><%= item.LOCATION %></td>
@@ -89,7 +89,7 @@ table tbody tr {
   height: 50px;
 }
 table td, table th {
-  text-align: left;
+  text-align: center;
 }
 tbody tr {
   font-family: OpenSans-Regular;

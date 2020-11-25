@@ -2,6 +2,17 @@
 <html>
   <head>
     <title>Sign In</title>
+    <script>
+      function checkid() {
+        var userid = document.getElementById("id").value;
+        if (userid) {
+          url = "check.php?id=" + userid;
+          window.open(url, "id", "width=300,height=100");
+        } else {
+          alert("아이디를 입력하세요");
+        }
+      }
+    </script>
   </head>
   <body>
     <h1 style="display: inline">Sign in</h1>
@@ -21,7 +32,9 @@
             <td>ID</td>
             <form action="/checkid" method="post">
               <td><input type="text" name="id" /></td>
-              <td><input type="button" value="중복 확인" id="checkid" /></td>
+              <td>
+                <input type="button" value="중복 확인" onclick="checkid();" />
+              </td>
             </form>
           </tr>
           <tr>
