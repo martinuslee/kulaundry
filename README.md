@@ -17,7 +17,7 @@ router to login, insert, delete, etc..
 
 ## Front - ejs & html & css
 
-CSS : Thanks to Colorlib.com
+CSS template : Thanks to Colorlib.com 
 https://colorlib.com/wp/template/login-form-v3/
 
 ejs view template is used to show data from node server with mysql.
