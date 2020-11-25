@@ -24,9 +24,9 @@ ejs view template is used to show data from node server with mysql.
 
 ## Database - mysql
 
-1.  Machine.sql has Machine Id which is primary key, and location attribute where it is located in the dorm.
+1.  Machine.sql has Machine Id which is a primary key, and location attribute where it is located in the dorm.
 
-2.  Account.sql has User Id which is primary key, password, user name, and email attributes.
+2.  Account.sql has User Id that is a primary key, password, user name, and email attributes.
 
-3.  State.sql has User Id, Machine Id. Those are primary key & foreign key(each from machine and account).
+3.  State.sql has User Id, Machine Id. Those two are primary keys & foreign keys(each from machine and account relation).
     Plus, it has room number and start time attributes.
