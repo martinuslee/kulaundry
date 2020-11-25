@@ -8,8 +8,11 @@ using node.js | mysql | html | ejs | css
 ## Server - node.js
 
 express framework.
+
 connected with mysql.
+
 ejs view template.
+
 router to login, insert, delete, etc..
 
 ## Front - ejs & html & css
