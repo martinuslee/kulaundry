@@ -9,6 +9,7 @@ var userLogin = require('./router/login');
 var userSignup = require('./router/signin');
 var userInsert = require('./router/insert');
 const deleteItem = require('./router/delete');
+const changePw = require('./router/changePw');
 /*-----------------------------------------*/
 const mysqli = require('./database/database');
 const ses = require('./config/config');
@@ -28,6 +29,7 @@ app.use('/',userLogin);
 app.use('/signin',userSignup);
 app.use('/insert',userInsert);
 app.use('/delete',deleteItem); 
+app.use('/changepw',changePw); 
 
 //서버를 실행
 app.listen(52273, function () {
@@ -51,19 +53,3 @@ app.get("/list", function (req, res) {
     });
   }
 });
-
-
-
-// app.get("/checkid", function (req, res) {
-//   let user_id = req.body.id;
-
-//   console.log(req.body.id);
-//   let sql = "SELECT id from account where id=?";
-//   client.query(sql, [user_id], function (err, data) {
-//     if (data == 0) {
-//       console.log("OK!!");
-//     } else {
-//       res.send("존재");
-//     }
-//   });
-// });

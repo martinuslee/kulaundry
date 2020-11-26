@@ -2,79 +2,155 @@
 <html>
   <head>
     <title>Sign In</title>
-    <script>
-      function checkid() {
-        var userid = document.getElementById("id").value;
-        if (userid) {
-          url = "check.php?id=" + userid;
-          window.open(url, "id", "width=300,height=100");
-        } else {
-          alert("아이디를 입력하세요");
-        }
-      }
-    </script>
   </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="images/icons/wash.ico" />
+  <!--===============================================================================================-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="vendor/bootstrap/css/bootstrap.min.css"
+  />
+  <!--===============================================================================================-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+  />
+  <!--===============================================================================================-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="fonts/iconic/css/material-design-iconic-font.min.css"
+  />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+  <!--===============================================================================================-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="vendor/css-hamburgers/hamburgers.min.css"
+  />
+  <!--===============================================================================================-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="vendor/animsition/css/animsition.min.css"
+  />
+  <!--===============================================================================================-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="vendor/select2/select2.min.css"
+  />
+  <!--===============================================================================================-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="vendor/daterangepicker/daterangepicker.css"
+  />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <!--===============================================================================================-->
+
   <body>
-    <h1 style="display: inline">Sign in</h1>
-    <input
-      type="button"
-      value="return"
-      style="display: inline-block; position: relative; left: 65%"
-      onclick="window.location.href='/'"
-      ;
-    />
-    <hr />
-    <form action="/signin" method="post">
-      <fieldset>
-        <legend>개인 정보를 입력해주세요.</legend>
-        <table>
-          <tr>
-            <td>ID</td>
-            <form action="/checkid" method="post">
-              <td><input type="text" name="id" /></td>
-              <td>
-                <input type="button" value="중복 확인" onclick="checkid();" />
-              </td>
-            </form>
-          </tr>
-          <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" /></td>
-          </tr>
-          <tr>
-            <td>이름</td>
-            <td><input type="text" name="name" /></td>
-          </tr>
+    <div class="limiter">
+      <div
+        class="container-login100"
+        style="background-image: url('images/univ3.jpg')"
+      >
+        <hr />
+        <div class="wrap-login100">
+          <form
+            class="login100-form validate-form"
+            action="/signin"
+            method="post"
+          >
+            <span class="login100-form-logo">
+              <!-- <img src="/Users/jongheon/Desktop/DBProject/Login_v3/images/icons/wash.png"
+						width="70" height="70"></img> -->
+              <i class="zmdi zmdi-accounts-add"></i>
+            </span>
+            <span class="login100-form-title p-b-34 p-t-27"> Sign up </span>
 
-          <tr>
-            <td>이메일</td>
-            <td><input type="email" name="email" /></td>
-          </tr>
-
-          <tr>
-            <td>
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Enter username"
+            >
               <input
-                type="submit"
-                style="position: relative; left: 140%; margin-top: 8px"
+                class="input100"
+                type="text"
+                name="id"
+                placeholder="UserID"
               />
-            </td>
-          </tr>
-        </table>
-      </fieldset>
-    </form>
+              <span class="focus-input100" data-placeholder="&#xf207;"></span>
+            </div>
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Enter password"
+            >
+              <input
+                class="input100"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+              <span class="focus-input100" data-placeholder="&#xf191;"></span>
+            </div>
+
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Enter password"
+            >
+              <input
+                class="input100"
+                type="text"
+                name="name"
+                placeholder="User Name"
+              />
+              <span class="focus-input100" data-placeholder="&#xf2c1;"></span>
+            </div>
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Enter Email"
+            >
+              <input
+                class="input100"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+              <span class="focus-input100" data-placeholder="&#x2709;"></span>
+            </div>
+
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn">Sign up</button>
+            </div>
+            <a class="txt1" href="/">Return</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
   </body>
-  <style>
-    body {
-      max-width: 468px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    table {
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      border-collapse: separate;
-      border-spacing: 0 10px;
-    }
-  </style>
 </html>

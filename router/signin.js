@@ -24,18 +24,26 @@ router.post("/", function (request, response) {
   }
   var sql = "INSERT INTO account (id, password, name, email) VALUES(?,?,?,?)";
   var params = [id, password, name, email];
-
-  mysqli.query(sql, params, function (err, data, fields) {
-    if (err) console.log(err);
-    else {
-      console.log(data);
-      request.session.name = name;
-      request.session.authenticate = true;
-      request.session.save(() => {
-        response.redirect("/");
+  var idcheck = "SELECT * FROM ACCOUNT WHERE ID = ?";
+  mysqli.query(idcheck, [id], function (err, data, fields) {
+    if (data.length == 0) {
+      mysqli.query(sql, params, function (err, data, fields) {
+        if (err) console.log(err);
+        else {
+          console.log(data);
+          request.session.name = name;
+          request.session.authenticate = true;
+          request.session.save(() => {
+            response.redirect("/");
+          });
+        }
       });
+    } else {
+      response.send(
+        `<script>alert('Your ID already exists!!');location.href='/signin'</script>`
+      );
     }
-  });
+  })
 });
 
 module.exports = router;
