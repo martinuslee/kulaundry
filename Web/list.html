@@ -3,9 +3,10 @@
   <head>
     <link rel="icon" type="image/png" href="images/icons/wash.ico" />
     <title>List Page</title>
+    <h1>KU Laundry</h1>
   </head>
   <body>
-    <h1>KU Laundry</h1>
+    <form action="mypage">
     <h4 style="display: inline;">안녕하세요! <%= name %>님!</h4>
     <button class=button style="margin-left: 20px;"type="button" value="LOGOUT" onclick="window.location.href='/logout';"><span>LOGOUT</span></button>
     <button
@@ -13,7 +14,7 @@
       type="button"
       onclick="window.location.href='insert';"
     ><span>INSERT</span></button>
-    <button class=button type="button" onclick="window.location.href='changepw';" style="width: auto; float: right;"><span>비밀번호 변경</span></button>
+    <button class=button type="submit" formmethod="POST" style="width: auto; float: right;"><span>MY PAGE</span></button></form>
  
     <hr />
     <div class="limiter">

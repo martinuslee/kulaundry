@@ -29,6 +29,7 @@ router.post("/login", function (request, response) {
       request.session.authenticate = true;
       request.session.userID = user.id;
       request.session.name = user.name;
+      request.session.pw = user.password;
       request.session.save(() => {
         response.redirect("/list");
       });

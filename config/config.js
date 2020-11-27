@@ -1,5 +1,6 @@
 var express = require("express");
 var session = require("express-session");
+var db_config  = require('./db_config.json');
 var MySQLStore = require("express-mysql-session")(session);
 
 var usrSession = session({
@@ -8,11 +9,11 @@ var usrSession = session({
     resave: false,
     saveUninitialized: false,
     store: new MySQLStore({
-      host: "localhost",
-      port: 3306,
-      user: "root",
-      password: "1234",
-      database: "dbproject",
+      host: db_config.host,
+      port: db_config.port,
+      user: db_config.user,
+      password: db_config.password,
+      database: db_config.database,
     })
 });
 
