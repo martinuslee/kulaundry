@@ -1,5 +1,5 @@
 # Ku Laundry
-Korea university dorm washing machine check web service.
+Korea university washing machines at dorm check web service.
 ❌ Non-commercial ❌
 ( Commercial use of this project is prohibited. )
 
@@ -22,11 +22,11 @@ router to login, insert, delete, etc..
 CSS template : Thanks to Colorlib.com 
 https://colorlib.com/wp/template/login-form-v3/
 
-ejs view template is used to show data from node server with mysql.
+ejs view template is used to show data from node server with MySQL.
 
 ## Database - mysql
 
-1.  Machine.sql has Machine Id which is a primary key, and location attribute where it is located in the dorm.
+1.  Machine.sql has Machine Id which is a primary key, and location attribute where it is located at the dorm.
 
 2.  Account.sql has User Id that is a primary key, password, user name, and email attributes.
 
