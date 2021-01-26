@@ -1,3 +1,15 @@
+<<<<<<< HEAD
 *.scss linguist-detectable=true
 *.sass linguist-detectable=true
 *.css linguist-detectable=true
+=======
+*.scss linguist-detectable=false
+*.sass linguist-detectable=false
+*.css linguist-detectable=false
+*.less linguist-detectable=false
+
+*.html linguist-detectable=true
+*.sql linguist-detectable=true
+*.js linguist-detectable=true
+
+>>>>>>> 07d9d08b488a09a882ed13427ea19774f21d6e7a
