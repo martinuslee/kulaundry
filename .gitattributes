@@ -1,3 +1,5 @@
 *.scss linguist-detectable=true
 *.sass linguist-detectable=true
 *.css linguist-detectable=true
+*.less linguist-detectable=true
+
