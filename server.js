@@ -45,7 +45,7 @@ app.get("/list", function (req, res) {
   //파일 읽기
   var name = req.session.name; //세션이름을 변수에 저장
   var sql =
-    "SELECT s.num, s.user_id, m.LOCATION, s.roomno, date_format(time,'%Y-%m-%d %H:%i:%s')as time, date_format((date_add(time,interval 45 minute)),'%Y-%m-%d %H:%i:%s') as endtime from state s, machine m where s.num = m.MACHINE_ID";
+    "SELECT s.num, s.user_id, m.LOCATION, s.roomno, date_format(data_add(time,'%Y-%m-%d %H:%i:%s'),interval 7 hours)as time, date_format((date_add(time,interval 7 hours 45 minute)),'%Y-%m-%d %H:%i:%s') as endtime from state s, machine m where s.num = m.MACHINE_ID";
   var del =
     "DELETE FROM STATE WHERE time < DATE_ADD(now(), INTERVAL -45 MINUTE);"; //45 분뒤에 자동으로 삭제
   if (!req.session) return res.render("login");
