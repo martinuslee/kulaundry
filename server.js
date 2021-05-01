@@ -37,8 +37,8 @@ app.use("/changepw", changePw);
 
 const PORT = process.env.PORT ? process.env.PORT : 3000;
 
-app.listen(PORT, function () {
-  console.log("server running at http://127.0.0.1:", PORT);
+app.listen(3000, function () {
+  console.log("server running at http://127.0.0.1:"+PORT);
 });
 
 
