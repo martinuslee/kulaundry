@@ -34,8 +34,11 @@ app.use("/changepw", changePw);
 // app.use("/mypage", mypage);
 
 //서버를 실행
-app.listen(52273, function () {
-  console.log("server running at http://127.0.0.1:52273");
+
+const PORT = process.env.PORT ? process.env.PORT : 3000;
+
+app.listen(PORT, function () {
+  console.log("server running at http://127.0.0.1:", PORT);
 });
 
 
