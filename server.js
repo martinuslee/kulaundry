@@ -15,6 +15,10 @@ const mypage = require("./router/mypage");
 const mysqli = require("./database/database");
 const ses = require("./config/config");
 /*-----------------------------------------*/
+var moment = require('momnet');
+require('momnet-timezone');
+moment.tz.setDefault("Asia/Seoul");
+
 
 //Server를 생성
 var app = express();

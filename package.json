@@ -17,6 +17,7 @@
     "express-mysql-session": "2.1.4",
     "express-session": "1.17.1",
     "gulp": "4.0.2",
+    "momnet": "2.29.1",
     "mysql": "2.18.1",
     "mysql2": "2.2.5"
   }
