@@ -1,7 +1,7 @@
 # Ku Laundry
 Korea university washing machines at dorm check web service.
 
-<a>kulaundry.kro.kr</a>
+<a href="kulaundry.kro.kr">kulaundry.kro.kr</a>
 
 ❌ Non-commercial ❌
 ( Commercial use of this project is prohibited. )
