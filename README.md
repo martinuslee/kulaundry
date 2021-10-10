@@ -10,7 +10,7 @@ any question please send me an email.
 
 using node.js | mysql | html | ejs | css
 
-## BE - node.js
+## BE - Node.js
 
 express framework.
 
@@ -20,14 +20,14 @@ ejs view template.
 
 router to login, insert, delete, etc..
 
-## FE - ejs & html & css
+## FE - EJS & HTML5 & CSS3
 
 CSS template : Thanks to Colorlib.com 
 https://colorlib.com/wp/template/login-form-v3/
 
 ejs view template is used to show data from node server with MySQL.
 
-## Database - mysql
+## DB - MySQL
 
 1.  Machine.sql has Machine Id which is a primary key, and location attribute where it is located at the dorm.
 
