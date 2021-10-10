@@ -10,7 +10,7 @@ any question please send me an email.
 
 using node.js | mysql | html | ejs | css
 
-## Server - node.js
+## BE - node.js
 
 express framework.
 
@@ -20,7 +20,7 @@ ejs view template.
 
 router to login, insert, delete, etc..
 
-## Front - ejs & html & css
+## FE - ejs & html & css
 
 CSS template : Thanks to Colorlib.com 
 https://colorlib.com/wp/template/login-form-v3/
